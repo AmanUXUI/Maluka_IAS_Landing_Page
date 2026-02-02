@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maluka IAS - Modern UPSC Preparation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0B1120', // Almost black navy (Backgrounds/Text)
+                            primary: '#00c17b', // New Primary Green
+                            secondary: '#007fff', // New Secondary Blue
+                            cream: '#F9FAFB', // Light gray/cream
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 20px rgba(0, 193, 123, 0.4)', // Updated to match primary green
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Modern Grid Pattern Background */
+        .bg-grid-pattern {
+            background-color: #0B1120;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-brand-cream antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <!-- Replace the src URL below with your actual logo image -->
+                    <img src="https://i.postimg.cc/NLqvyBsM/9b71a2d5-7db7-4624-8b66-4e2a1d589eb3.png" alt="Maluka IAS Logo" class="h-10 w-auto object-contain">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#courses" class="text-sm font-bold text-gray-600 hover:text-brand-secondary transition-colors uppercase tracking-wide">Courses</a>
+                    <a href="#why-us" class="text-sm font-bold text-gray-600 hover:text-brand-secondary transition-colors uppercase tracking-wide">Why Us</a>
+                    <a href="#testimonials" class="text-sm font-bold text-gray-600 hover:text-brand-secondary transition-colors uppercase tracking-wide">Testimonials</a>
+                    <a href="tel:+910000000000" class="group bg-brand-navy text-white px-6 py-2.5 rounded-full font-bold transition-all hover:bg-brand-secondary hover:shadow-lg flex items-center gap-2">
+                        <span>Call Now</span>
+                        <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Button -->
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-brand-navy p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-xl">
+            <a href="#courses" class="block py-3 font-bold text-brand-navy">Courses</a>
+            <a href="#why-us" class="block py-3 font-bold text-brand-navy">Why Us</a>
+            <a href="#testimonials" class="block py-3 font-bold text-brand-navy">Testimonials</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-grid-pattern overflow-hidden">
+        <!-- Abstract Glows -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-secondary rounded-full filter blur-[120px] opacity-20 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary rounded-full filter blur-[120px] opacity-10 -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Changed grid to 12 columns for precise 3-column layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                
+                <!-- Text Content (Spans 5 columns) -->
+                <div class="lg:col-span-5 text-white space-y-8 relative z-20">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase text-gray-300">Admissions Open</span>
+                    </div>
+
+                    <h1 class="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+                        IAS, IPS, PCS
+                        <span class="block text-brand-primary mt-2">UPSC Made Simple.</span>
+                    </h1>
+
+                    <p class="text-lg text-gray-400 max-w-lg leading-relaxed font-light">
+                        Get structured training, expert mentorship, and regular test practice to prepare with clarity and confidence.
+                    </p>
+
+                    <!-- Features Pills -->
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-300 backdrop-blur-md">GS + CSAT + Optional</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-300 backdrop-blur-md">English | Hindi | Punjabi</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <!-- Primary CTA now uses Brand Primary (Green) -->
+                        <button onclick="scrollToForm()" class="bg-brand-primary hover:bg-[#00a86b] text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-glow">
+                            Book Free Counselling
+                        </button>
+                        <div class="flex items-center gap-2 px-4 py-3">
+                            <div class="flex -space-x-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-brand-navy"></div>
+                                <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-brand-navy"></div>
+                                <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-brand-navy flex items-center justify-center text-[10px] font-bold text-white">+2k</div>
+                            </div>
+                            <span class="text-sm text-gray-400 font-medium">Students Trusted</span>
+                        </div>
+                    </div>
+
+                    <!-- Locations Text Highlighted -->
+                    <div class="mt-8 inline-block">
+                        <p class="text-xs text-brand-primary font-bold uppercase tracking-widest mb-2 ml-1">Our Presence</p>
+                        <div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-brand-navy to-gray-900 border border-brand-primary/30 shadow-[0_0_15px_rgba(0,193,123,0.1)] hover:border-brand-primary/60 transition-colors cursor-default">
+                             <i class="fas fa-map-marker-alt text-brand-primary animate-bounce"></i>
+                             <p class="text-sm font-bold text-white tracking-wide uppercase">
+                                Chandigarh <span class="text-gray-600 mx-1">|</span> Patiala <span class="text-gray-600 mx-1">|</span> Bathinda <span class="text-gray-600 mx-1">|</span> Ludhiana <span class="text-gray-600 mx-1">|</span> Amritsar <span class="text-gray-600 mx-1">|</span> Jalandhar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Cutout (Spans 3 columns - Center) -->
+                <div class="hidden lg:flex lg:col-span-3 h-full items-end justify-center relative z-10">
+                     <!-- Glow behind image -->
+                     <div class="absolute bottom-10 w-40 h-40 bg-brand-primary/30 blur-[60px] rounded-full"></div>
+                     <!-- Replace src with your cutout PNG -->
+                     <!-- Removed hover:-translate-y-20 to stop upward movement -->
+                     <img src="https://i.postimg.cc/m2yFbD2W/Chat-GPT-Image-Feb-2-2026-05-46-12-PM-1.png" class="relative z-10 w-full h-auto object-contain drop-shadow-2xl transform scale-[1.8] translate-y-36 origin-bottom hover:scale-[1.85] transition-transform duration-500">
+                </div>
+
+                <!-- Lead Form Card (Spans 4 columns) -->
+                <div class="lg:col-span-4 relative z-20">
+                    <div id="counselling-form" class="bg-white rounded-3xl p-8 shadow-2xl shadow-brand-secondary/20 relative z-20">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl text-brand-navy">Get a Call Back</h3>
+                                <p class="text-gray-500 text-sm mt-1">Our expert team will guide you.</p>
+                            </div>
+                            <div class="bg-brand-primary/10 p-2 rounded-lg">
+                                <i class="fas fa-phone-alt text-brand-primary"></i>
+                            </div>
+                        </div>
+
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Full Name</label>
+                                <input type="text" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary/20 focus:border-brand-secondary transition-colors font-medium text-brand-navy placeholder-gray-400" placeholder="John Doe">
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Mobile Number</label>
+                                <input type="tel" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary/20 focus:border-brand-secondary transition-colors font-medium text-brand-navy placeholder-gray-400" placeholder="+91 98765 43210">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold text-gray-500 uppercase">City</label>
+                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                        <option>Chandigarh</option>
+                                        <option>Patiala</option>
+                                        <option>Bathinda</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-bold text-gray-500 uppercase">Medium</label>
+                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                        <option>English</option>
+                                        <option>Hindi</option>
+                                        <option>Punjabi</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Course</label>
+                                <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                    <option>GS</option>
+                                    <option>CSAT</option>
+                                    <option>Optional</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-navy hover:bg-brand-secondary text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl mt-2 flex justify-center items-center gap-2 group">
+                                Request Call Back
+                                <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Decorative back card -->
+                    <div class="absolute inset-0 bg-brand-primary rounded-3xl rotate-3 translate-x-2 translate-y-2 opacity-50 z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Highlights (Horizontal Strip) -->
+    <section class="border-y border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
+                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-brand-secondary/5 rounded-2xl flex items-center justify-center text-brand-secondary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chalkboard-teacher text-xl"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-brand-navy">Expert Guidance</h4>
+                    <p class="text-xs text-gray-500 mt-1">Industry leading mentors</p>
+                </div>
+                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tasks text-xl"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-brand-navy">Structured Plan</h4>
+                    <p class="text-xs text-gray-500 mt-1">Daily goals & roadmap</p>
+                </div>
+                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-brand-navy">Regular Tests</h4>
+                    <p class="text-xs text-gray-500 mt-1">Performance tracking</p>
+                </div>
+                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-check text-xl"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-brand-navy">Mentorship</h4>
+                    <p class="text-xs text-gray-500 mt-1">1-to-1 Personal support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section (Modern Cards) -->
+    <section id="courses" class="py-24 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <span class="text-brand-primary font-bold uppercase tracking-widest text-xs">Academic Programs</span>
+                    <h2 class="font-heading font-bold text-4xl text-brand-navy mt-2">Choose Your Path</h2>
+                </div>
+                <p class="text-gray-500 max-w-md text-sm md:text-right">
+                    Designed for every stage of your UPSC journey. From foundation building to final interview prep.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- GS Card -->
+                <div class="bg-white rounded-[2rem] p-2 shadow-soft hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-navy rounded-[1.5rem] p-8 text-white h-full flex flex-col relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-50 -mr-10 -mt-10"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                                <i class="fas fa-book text-brand-primary"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl mb-2">GS (General Studies)</h3>
+                            <p class="text-gray-400 text-sm mb-6">Strong Foundation for UPSC/PCS Preparation.</p>
+                            
+                            <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Comprehensive NCERT + GS Classes</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Daily 1-to-1 Mentorship</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Prelims + Mains aligned</li>
+                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Interview guidance</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto pt-6 border-t border-white/10">
+                            <button onclick="scrollToForm()" class="w-full py-3 bg-white text-brand-navy font-bold rounded-xl hover:bg-brand-primary hover:text-white transition-colors">
+                                Enquire Now
+                            </button>
+                            <p class="text-center text-xs text-gray-500 mt-3 font-medium uppercase">Ideal for beginners</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSAT Card -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2">CSAT</h3>
+                    <p class="text-gray-500 text-sm mb-6">Practice-Based Training to Clear CSAT.</p>
+                    
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Aptitude + Reasoning</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Speed & accuracy improvement</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Mock tests with solutions</li>
+                    </ul>
+
+                    <div class="mt-auto">
+                        <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl hover:bg-brand-navy hover:text-white transition-colors border border-gray-200 hover:border-brand-navy">
+                            Enquire Now
+                        </button>
+                        <p class="text-center text-xs text-gray-400 mt-3 font-medium uppercase">Prelims Support</p>
+                    </div>
+                </div>
+
+                <!-- Optional Card -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2">Optional</h3>
+                    <p class="text-gray-500 text-sm mb-6">Subject-Wise Optional Guidance for Mains.</p>
+                    
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Topic-wise coverage</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Answer writing improvement</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Mentor support & evaluation</li>
+                    </ul>
+
+                    <div class="mt-auto">
+                        <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl hover:bg-brand-navy hover:text-white transition-colors border border-gray-200 hover:border-brand-navy">
+                            Enquire Now
+                        </button>
+                        <p class="text-center text-xs text-gray-400 mt-3 font-medium uppercase">Mains Focus</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Why Us -->
+    <section id="why-us" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decorative background blobs -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -translate-x-1/2"></div>
+            <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl translate-x-1/2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">The Maluka Advantage</span>
+                <h2 class="font-heading font-extrabold text-4xl md:text-5xl text-brand-navy mt-3 mb-6">Why Students Choose <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Maluka IAS</span></h2>
+                <p class="text-gray-500 text-lg">We bridge the gap between hard work and smart strategy, providing an ecosystem designed for your rank.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+                
+                <!-- 1. Clear Roadmap (Tall Card - Left) -->
+                <div class="md:col-span-1 md:row-span-2 rounded-[2rem] bg-brand-navy p-8 flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/20 rounded-full blur-[80px] group-hover:bg-brand-secondary/30 transition-all duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-brand-primary text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-3xl text-white mb-3">Clear Roadmap</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm">A structured, step-by-step pathway from foundation to interview. No confusion, just pure preparation.</p>
+                    </div>
+                    <div class="relative z-10 mt-6">
+                         <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-primary w-2/3 shadow-[0_0_10px_rgba(0,193,123,0.5)]"></div>
+                         </div>
+                         <p class="text-xs text-brand-primary mt-2 font-bold uppercase tracking-wide">Progress Oriented</p>
+                    </div>
+                </div>
+
+                <!-- 2. Regular Testing (Wide Card - Top Right) -->
+                <div class="md:col-span-2 md:row-span-1 rounded-[2rem] bg-gray-50 border border-gray-100 p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden group hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300">
+                     <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white to-transparent z-10 hidden md:block"></div>
+                     <div class="relative z-20 max-w-md">
+                         <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary text-xl">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl text-brand-navy">Regular Testing</h3>
+                         </div>
+                         <p class="text-gray-500 text-sm mb-4">Daily Prelims & Mains practice with detailed performance analytics to track your growth curve.</p>
+                         <div class="flex gap-2">
+                             <span class="px-3 py-1 rounded-lg bg-white border text-xs font-bold text-gray-600 shadow-sm">Daily Quiz</span>
+                             <span class="px-3 py-1 rounded-lg bg-white border text-xs font-bold text-gray-600 shadow-sm">Weekly Mock</span>
+                         </div>
+                     </div>
+                     <!-- Visual Element -->
+                     <div class="relative z-0 mt-6 md:mt-0 md:absolute md:right-8 md:top-1/2 md:-translate-y-1/2">
+                         <div class="w-32 h-32 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center relative">
+                             <svg class="w-full h-full transform -rotate-90">
+                                 <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="8" fill="transparent" class="text-gray-100" />
+                                 <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="351.86" stroke-dashoffset="35" class="text-brand-primary" />
+                             </svg>
+                             <span class="absolute text-xl font-bold text-brand-navy">98%</span>
+                         </div>
+                     </div>
+                </div>
+
+                <!-- 3. Mentorship (Square - Middle) -->
+                <div class="md:col-span-1 md:row-span-1 rounded-[2rem] bg-gradient-to-br from-brand-secondary to-blue-600 p-8 text-white flex flex-col justify-between group hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
+                     <div class="flex justify-between items-start">
+                         <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white text-xl backdrop-blur-sm">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <i class="fas fa-arrow-up-right text-white/50 group-hover:text-white group-hover:rotate-45 transition-all"></i>
+                     </div>
+                     <div>
+                        <h3 class="font-heading font-bold text-2xl mb-1">Mentorship</h3>
+                        <p class="text-blue-100 text-xs">1-to-1 Consistent guidance</p>
+                     </div>
+                </div>
+
+                <!-- 4. Study Material (Square - Right) -->
+                <div class="md:col-span-1 md:row-span-1 rounded-[2rem] bg-white border border-gray-200 p-8 flex flex-col justify-between group hover:border-brand-primary hover:shadow-lg transition-all duration-300">
+                    <div class="flex justify-between items-start">
+                         <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center text-brand-navy text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                     </div>
+                     <div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-navy mb-1">Study Material</h3>
+                        <p class="text-gray-500 text-xs">Concise notes & resources</p>
+                     </div>
+                </div>
+
+                <!-- 5. Offline Environment (Wide Bar - Bottom) -->
+                <div class="md:col-span-3 md:row-span-1 rounded-[2rem] bg-[#0B1120] p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+                    <!-- Background Pattern -->
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#007fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    
+                    <div class="flex items-center gap-6 relative z-10 mb-6 md:mb-0">
+                        <div class="w-16 h-16 bg-gradient-to-br from-brand-primary to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-glow">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-2xl text-white">Offline Centres</h3>
+                            <p class="text-gray-400 text-sm">Discipline-focused learning environment</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-3 relative z-10">
+                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
+                            <i class="fas fa-map-pin text-brand-primary"></i>
+                            <span class="font-bold text-white text-sm">Chandigarh</span>
+                        </div>
+                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
+                            <i class="fas fa-map-pin text-brand-secondary"></i>
+                            <span class="font-bold text-white text-sm">Patiala</span>
+                        </div>
+                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
+                            <i class="fas fa-map-pin text-orange-400"></i>
+                            <span class="font-bold text-white text-sm">Bathinda</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Marquee Style) -->
+    <section id="testimonials" class="py-24 bg-brand-navy overflow-hidden">
+        <div class="text-center mb-12">
+            <span class="text-brand-primary font-bold uppercase tracking-widest text-xs">Success Stories</span>
+            <h2 class="font-heading font-bold text-3xl text-white mt-2">Student Feedback</h2>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Regular tests helped improve my preparation speed and confidence.</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
+                        <span class="text-white font-bold text-sm">Student</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Mentorship gave me a clear plan for GS and CSAT.</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
+                        <span class="text-white font-bold text-sm">Student</span>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">The classroom environment kept me consistent.</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
+                        <span class="text-white font-bold text-sm">Student</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion (Clean) -->
+    <section class="py-24 bg-brand-cream">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="font-heading font-bold text-3xl text-brand-navy text-center mb-12">Common Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-1 shadow-sm">
+                    <button class="w-full px-6 py-4 text-left font-bold text-brand-navy flex justify-between items-center" onclick="toggleFaq(1)">
+                        <span>Q1. Who can join these courses?</span>
+                        <i id="icon-1" class="fas fa-plus text-brand-primary transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-4 text-gray-500 text-sm">
+                        Students preparing for UPSC at foundation, beginner or Mains level.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-1 shadow-sm">
+                    <button class="w-full px-6 py-4 text-left font-bold text-brand-navy flex justify-between items-center" onclick="toggleFaq(2)">
+                        <span>Q2. Are courses available in Punjabi medium?</span>
+                        <i id="icon-2" class="fas fa-plus text-brand-primary transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-4 text-gray-500 text-sm">
+                        Yes, English, Hindi and Punjabi support is available.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-1 shadow-sm">
+                    <button class="w-full px-6 py-4 text-left font-bold text-brand-navy flex justify-between items-center" onclick="toggleFaq(3)">
+                        <span>Q3. Can I join only CSAT?</span>
+                        <i id="icon-3" class="fas fa-plus text-brand-primary transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-4 text-gray-500 text-sm">
+                         Yes, students can join GS, CSAT or Optional separately.
+                    </div>
+                </div>
+                 <div class="bg-white rounded-2xl p-1 shadow-sm">
+                    <button class="w-full px-6 py-4 text-left font-bold text-brand-navy flex justify-between items-center" onclick="toggleFaq(4)">
+                        <span>Q4. Do you provide test practice?</span>
+                        <i id="icon-4" class="fas fa-plus text-brand-primary transition-transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-4 text-gray-500 text-sm">
+                         Yes, regular tests and evaluation are included.
+                    </div>
+                </div>
+                 <div class="bg-white rounded-2xl p-1 shadow-sm">
+                    <button class="w-full px-6 py-4 text-left font-bold text-brand-navy flex justify-between items-center" onclick="toggleFaq(5)">
+                        <span>Q5. Which centres are available?</span>
+                        <i id="icon-5" class="fas fa-plus text-brand-primary transition-transform"></i>
+                    </button>
+                    <div id="faq-5" class="hidden px-6 pb-4 text-gray-500 text-sm">
+                         Chandigarh, Patiala and Bathinda.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="bg-brand-navy py-20 border-t border-white/10 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-secondary/5"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <h2 class="font-heading font-bold text-4xl text-white mb-6">Admissions Open at Maluka IAS</h2>
+            <p class="text-gray-400 mb-10 text-lg">Speak to our team for course details, batches and counselling.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+910000000000" class="bg-white text-brand-navy hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-transform hover:-translate-y-1">
+                    Call Official Number
+                </a>
+                <a href="#centres" class="bg-transparent border border-gray-600 text-white hover:border-white hover:bg-white/5 font-bold py-4 px-8 rounded-xl transition-colors">
+                    Visit Nearest Centre
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Copyright -->
+    <footer class="bg-[#050911] text-gray-500 py-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>&copy; 2026 Maluka IAS. All rights reserved. | Design & Developed By Mediagarh</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.add('fa-plus');
+                icon.classList.remove('fa-minus');
+            }
+        }
+
+        function scrollToForm() {
+            document.getElementById('counselling-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-check"></i> Request Sent';
+            btn.classList.add('bg-green-600', 'hover:bg-green-700');
+            btn.classList.remove('bg-brand-navy', 'hover:bg-brand-secondary');
+            
+            setTimeout(() => {
+                alert('Thank you! Our team will call you back shortly.');
+                event.target.reset();
+                btn.innerHTML = originalContent;
+                btn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                btn.classList.add('bg-brand-navy', 'hover:bg-brand-secondary');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
