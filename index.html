@@ -118,27 +118,26 @@
                         <span class="text-xs font-bold tracking-widest uppercase text-gray-300">Admissions Open</span>
                     </div>
 
-                    <h1 class="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+                    <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-[1.1] tracking-tight">
                         IAS, IPS, PCS
-                        <span class="block text-brand-primary mt-2">UPSC Made Simple.</span>
+                        <span class="block text-brand-primary mt-2">UPSC Preparation Made Simple — GS + CSAT + Optional</span>
                     </h1>
 
                     <p class="text-lg text-gray-400 max-w-lg leading-relaxed font-light">
                         Get structured training, expert mentorship, and regular test practice to prepare with clarity and confidence.
                     </p>
-
-                    <!-- Features Pills -->
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-300 backdrop-blur-md">GS + CSAT + Optional</span>
-                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-300 backdrop-blur-md">English | Hindi | Punjabi</span>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <!-- Primary CTA now uses Brand Primary (Green) -->
-                        <button onclick="scrollToForm()" class="bg-brand-primary hover:bg-[#00a86b] text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-glow">
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <!-- Primary CTA -->
+                        <button onclick="scrollToForm()" class="bg-brand-primary hover:bg-[#00a86b] text-white px-6 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-glow flex items-center gap-2">
                             Book Free Counselling
                         </button>
-                        <div class="flex items-center gap-2 px-4 py-3">
+                        
+                        <!-- New Zoom Session Button -->
+                        <button onclick="scrollToForm()" class="bg-brand-secondary hover:bg-blue-600 text-white px-6 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-lg flex items-center gap-2">
+                            <i class="fas fa-video"></i> Zoom Session
+                        </button>
+
+                        <div class="flex items-center gap-2 px-2 py-3">
                             <div class="flex -space-x-3">
                                 <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-brand-navy"></div>
                                 <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-brand-navy"></div>
@@ -174,7 +173,7 @@
                     <div id="counselling-form" class="bg-white rounded-3xl p-8 shadow-2xl shadow-brand-secondary/20 relative z-20">
                         <div class="flex justify-between items-start mb-6">
                             <div>
-                                <h3 class="font-heading font-bold text-2xl text-brand-navy">Get a Call Back</h3>
+                                <h3 class="font-heading font-bold text-2xl text-brand-navy">Get a Call Back from Our Team</h3>
                                 <p class="text-gray-500 text-sm mt-1">Our expert team will guide you.</p>
                             </div>
                             <div class="bg-brand-primary/10 p-2 rounded-lg">
@@ -193,36 +192,38 @@
                                 <input type="tel" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary/20 focus:border-brand-secondary transition-colors font-medium text-brand-navy placeholder-gray-400" placeholder="+91 98765 43210">
                             </div>
 
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label class="text-xs font-bold text-gray-500 uppercase">City</label>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
-                                        <option>Chandigarh</option>
-                                        <option>Patiala</option>
-                                        <option>Bathinda</option>
-                                    </select>
-                                </div>
-                                <div class="space-y-1">
-                                    <label class="text-xs font-bold text-gray-500 uppercase">Medium</label>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
-                                        <option>English</option>
-                                        <option>Hindi</option>
-                                        <option>Punjabi</option>
-                                    </select>
-                                </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-gray-500 uppercase">City</label>
+                                <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                    <option value="" disabled selected>Select City</option>
+                                    <option>Chandigarh</option>
+                                    <option>Patiala</option>
+                                    <option>Bathinda</option>
+                                </select>
                             </div>
 
                             <div class="space-y-1">
-                                <label class="text-xs font-bold text-gray-500 uppercase">Course</label>
+                                <label class="text-xs font-bold text-gray-500 uppercase">Course Interested</label>
                                 <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                    <option value="" disabled selected>Select Course</option>
                                     <option>GS</option>
                                     <option>CSAT</option>
                                     <option>Optional</option>
                                 </select>
                             </div>
 
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Medium</label>
+                                <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-secondary transition-colors font-medium text-gray-700">
+                                    <option value="" disabled selected>Select Medium</option>
+                                    <option>English</option>
+                                    <option>Hindi</option>
+                                    <option>Punjabi</option>
+                                </select>
+                            </div>
+
                             <button type="submit" class="w-full bg-brand-navy hover:bg-brand-secondary text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl mt-2 flex justify-center items-center gap-2 group">
-                                Request Call Back
+                                Get Call Back
                                 <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
                             </button>
                         </form>
@@ -234,37 +235,65 @@
         </div>
     </section>
 
-    <!-- Trust Highlights (Horizontal Strip) -->
-    <section class="border-y border-gray-200 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
-                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-                    <div class="w-12 h-12 bg-brand-secondary/5 rounded-2xl flex items-center justify-center text-brand-secondary mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-chalkboard-teacher text-xl"></i>
+    <!-- Trust Highlights -->
+    <section class="py-20 bg-white border-b border-gray-100 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">TRUST HIGHLIGHTS</span>
+                <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-brand-navy mt-2">What You Get at Maluka IAS</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Highlight 1 -->
+                <div class="bg-brand-cream rounded-2xl p-6 border border-gray-100 hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-secondary text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h4 class="font-heading font-bold text-brand-navy">Expert Guidance</h4>
-                    <p class="text-xs text-gray-500 mt-1">Industry leading mentors</p>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Expert Guidance</h3>
+                    <div class="flex items-center gap-3 text-gray-600 bg-white p-3 rounded-lg border border-gray-100">
+                        <i class="fas fa-arrow-right text-brand-primary"></i>
+                        <span class="text-sm font-medium">Top mentors support</span>
+                    </div>
                 </div>
-                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-                    <div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tasks text-xl"></i>
+
+                <!-- Highlight 2 -->
+                <div class="bg-brand-cream rounded-2xl p-6 border border-gray-100 hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-purple-600 text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tasks"></i>
                     </div>
-                    <h4 class="font-heading font-bold text-brand-navy">Structured Plan</h4>
-                    <p class="text-xs text-gray-500 mt-1">Daily goals & roadmap</p>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Structured Study Plan</h3>
+                    <div class="flex items-center gap-3 text-gray-600 bg-white p-3 rounded-lg border border-gray-100">
+                        <i class="fas fa-arrow-right text-brand-primary"></i>
+                        <span class="text-sm font-medium">Daily roadmap + targets</span>
+                    </div>
                 </div>
-                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-                    <div class="w-12 h-12 bg-brand-primary/5 rounded-2xl flex items-center justify-center text-brand-primary mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-chart-line text-xl"></i>
+
+                <!-- Highlight 3 -->
+                <div class="bg-brand-cream rounded-2xl p-6 border border-gray-100 hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-primary text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h4 class="font-heading font-bold text-brand-navy">Regular Tests</h4>
-                    <p class="text-xs text-gray-500 mt-1">Performance tracking</p>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Regular Tests & Evaluation</h3>
+                    <div class="flex items-center gap-3 text-gray-600 bg-white p-3 rounded-lg border border-gray-100">
+                        <i class="fas fa-arrow-right text-brand-primary"></i>
+                        <span class="text-sm font-medium">Track progress weekly</span>
+                    </div>
                 </div>
-                <div class="p-8 flex flex-col items-center text-center group hover:bg-gray-50 transition-colors">
-                    <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-user-check text-xl"></i>
+
+                <!-- Highlight 4 -->
+                <div class="bg-brand-cream rounded-2xl p-6 border border-gray-100 hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-orange-500 text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-check"></i>
                     </div>
-                    <h4 class="font-heading font-bold text-brand-navy">Mentorship</h4>
-                    <p class="text-xs text-gray-500 mt-1">1-to-1 Personal support</p>
+                    <h3 class="font-heading font-bold text-xl text-brand-navy mb-3">Personal Mentorship Support</h3>
+                    <div class="flex items-center gap-3 text-gray-600 bg-white p-3 rounded-lg border border-gray-100">
+                        <i class="fas fa-arrow-right text-brand-primary"></i>
+                        <span class="text-sm font-medium">1:1 guidance available</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -286,75 +315,90 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- GS Card -->
-                <div class="bg-white rounded-[2rem] p-2 shadow-soft hover:shadow-xl transition-all duration-300 group">
-                    <div class="bg-brand-navy rounded-[1.5rem] p-8 text-white h-full flex flex-col relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-50 -mr-10 -mt-10"></div>
-                        
-                        <div class="relative z-10">
-                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                                <i class="fas fa-book text-brand-primary"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-2xl mb-2">GS (General Studies)</h3>
-                            <p class="text-gray-400 text-sm mb-6">Strong Foundation for UPSC/PCS Preparation.</p>
-                            
-                            <ul class="space-y-3 mb-8 text-sm text-gray-300">
-                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Comprehensive NCERT + GS Classes</li>
-                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Daily 1-to-1 Mentorship</li>
-                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Prelims + Mains aligned</li>
-                                <li class="flex items-center gap-3"><i class="fas fa-check text-brand-primary text-xs"></i> Interview guidance</li>
-                            </ul>
-                        </div>
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full group hover:bg-brand-navy hover:border-brand-navy relative overflow-hidden">
+                    <!-- Hover Decoration -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-0 group-hover:opacity-20 -mr-10 -mt-10 transition-opacity duration-300"></div>
 
-                        <div class="mt-auto pt-6 border-t border-white/10">
-                            <button onclick="scrollToForm()" class="w-full py-3 bg-white text-brand-navy font-bold rounded-xl hover:bg-brand-primary hover:text-white transition-colors">
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy group-hover:bg-white/10 group-hover:text-brand-primary transition-colors duration-300">
+                            <i class="fas fa-book text-brand-primary group-hover:text-brand-primary"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2 group-hover:text-white transition-colors duration-300">GS (General Studies)</h3>
+                        <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100 group-hover:text-gray-400 group-hover:border-white/10 transition-colors duration-300">Strong Foundation for UPSC/PCS Preparation</p>
+                        
+                        <ul class="space-y-3 mb-8 text-sm text-gray-600 group-hover:text-gray-300 transition-colors duration-300 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Comprehensive NCERT + GS Classes</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Current Affairs Classes</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Answer writing fundamentals</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Prelims + Mains aligned preparation</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Daily prelims and mains practice questions</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Daily 1-to-1 Mentorship</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Daily oral tests</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-primary text-xs mt-1"></i> <span>Interview guidance session</span></li>
+                        </ul>
+
+                        <div class="mt-auto pt-6 border-t border-transparent group-hover:border-white/10 transition-colors duration-300">
+                            <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl border border-gray-200 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-300">
                                 Enquire Now
                             </button>
-                            <p class="text-center text-xs text-gray-500 mt-3 font-medium uppercase">Ideal for beginners</p>
+                            <p class="text-center text-xs text-gray-400 mt-3 font-bold uppercase group-hover:text-gray-500 transition-colors duration-300">Ideal for beginners & foundation-level students</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- CSAT Card -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-                    <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2">CSAT</h3>
-                    <p class="text-gray-500 text-sm mb-6">Practice-Based Training to Clear CSAT.</p>
-                    
-                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-grow">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Aptitude + Reasoning</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Speed & accuracy improvement</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Mock tests with solutions</li>
-                    </ul>
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full group hover:bg-brand-navy hover:border-brand-navy relative overflow-hidden">
+                    <!-- Hover Decoration -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-0 group-hover:opacity-20 -mr-10 -mt-10 transition-opacity duration-300"></div>
 
-                    <div class="mt-auto">
-                        <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl hover:bg-brand-navy hover:text-white transition-colors border border-gray-200 hover:border-brand-navy">
-                            Enquire Now
-                        </button>
-                        <p class="text-center text-xs text-gray-400 mt-3 font-medium uppercase">Prelims Support</p>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy group-hover:bg-white/10 group-hover:text-brand-primary transition-colors duration-300">
+                            <i class="fas fa-calculator text-brand-navy group-hover:text-brand-primary"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2 group-hover:text-white transition-colors duration-300">CSAT</h3>
+                        <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100 group-hover:text-gray-400 group-hover:border-white/10 transition-colors duration-300">Practice-Based Training to Clear CSAT</p>
+                        
+                        <ul class="space-y-3 mb-8 text-sm text-gray-600 group-hover:text-gray-300 transition-colors duration-300 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Aptitude + Reasoning preparation</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Speed & accuracy improvement</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Mock tests with solutions</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Exam-focused strategy support</span></li>
+                        </ul>
+
+                        <div class="mt-auto pt-6 border-t border-transparent group-hover:border-white/10 transition-colors duration-300">
+                            <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl border border-gray-200 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-300">
+                                Enquire Now
+                            </button>
+                            <p class="text-center text-xs text-gray-400 mt-3 font-bold uppercase group-hover:text-gray-500 transition-colors duration-300">Ideal for Prelims qualification support</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Optional Card -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-                    <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy">
-                        <i class="fas fa-pen-nib"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2">Optional</h3>
-                    <p class="text-gray-500 text-sm mb-6">Subject-Wise Optional Guidance for Mains.</p>
-                    
-                    <ul class="space-y-3 mb-8 text-sm text-gray-600 flex-grow">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Topic-wise coverage</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Answer writing improvement</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-brand-secondary text-xs"></i> Mentor support & evaluation</li>
-                    </ul>
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full group hover:bg-brand-navy hover:border-brand-navy relative overflow-hidden">
+                    <!-- Hover Decoration -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-0 group-hover:opacity-20 -mr-10 -mt-10 transition-opacity duration-300"></div>
 
-                    <div class="mt-auto">
-                        <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl hover:bg-brand-navy hover:text-white transition-colors border border-gray-200 hover:border-brand-navy">
-                            Enquire Now
-                        </button>
-                        <p class="text-center text-xs text-gray-400 mt-3 font-medium uppercase">Mains Focus</p>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center mb-6 text-brand-navy group-hover:bg-white/10 group-hover:text-brand-primary transition-colors duration-300">
+                            <i class="fas fa-pen-nib text-brand-navy group-hover:text-brand-primary"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2 group-hover:text-white transition-colors duration-300">Optional</h3>
+                        <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100 group-hover:text-gray-400 group-hover:border-white/10 transition-colors duration-300">Subject-Wise Optional Guidance for Mains</p>
+                        
+                        <ul class="space-y-3 mb-8 text-sm text-gray-600 group-hover:text-gray-300 transition-colors duration-300 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Topic-wise coverage</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Answer writing improvement</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Mentor support & evaluation</span></li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-brand-secondary text-xs mt-1"></i> <span>Strategy for scoring better in Mains</span></li>
+                        </ul>
+
+                        <div class="mt-auto pt-6 border-t border-transparent group-hover:border-white/10 transition-colors duration-300">
+                            <button onclick="scrollToForm()" class="w-full py-3 bg-brand-cream text-brand-navy font-bold rounded-xl border border-gray-200 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-300">
+                                Enquire Now
+                            </button>
+                            <p class="text-center text-xs text-gray-400 mt-3 font-bold uppercase group-hover:text-gray-500 transition-colors duration-300">Ideal for Mains-focused students</p>
+                        </div>
                     </div>
                 </div>
 
@@ -362,129 +406,251 @@
         </div>
     </section>
 
-    <!-- Bento Grid Why Us -->
-    <section id="why-us" class="py-24 bg-white relative overflow-hidden">
-        <!-- Decorative background blobs -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div class="absolute top-1/4 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -translate-x-1/2"></div>
-            <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl translate-x-1/2"></div>
-        </div>
-
+    <!-- Medium + Centres Section -->
+    <section class="py-24 bg-brand-cream border-t border-gray-100 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">The Maluka Advantage</span>
-                <h2 class="font-heading font-extrabold text-4xl md:text-5xl text-brand-navy mt-3 mb-6">Why Students Choose <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Maluka IAS</span></h2>
-                <p class="text-gray-500 text-lg">We bridge the gap between hard work and smart strategy, providing an ecosystem designed for your rank.</p>
+            <div class="text-center mb-16">
+                <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">Accessibility & Reach</span>
+                <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-brand-navy mt-2">MEDIUM + CENTRES</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
-                
-                <!-- 1. Clear Roadmap (Tall Card - Left) -->
-                <div class="md:col-span-1 md:row-span-2 rounded-[2rem] bg-brand-navy p-8 flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/20 rounded-full blur-[80px] group-hover:bg-brand-secondary/30 transition-all duration-500"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-brand-primary text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-map-signs"></i>
-                        </div>
-                        <h3 class="font-heading font-bold text-3xl text-white mb-3">Clear Roadmap</h3>
-                        <p class="text-gray-400 leading-relaxed text-sm">A structured, step-by-step pathway from foundation to interview. No confusion, just pure preparation.</p>
-                    </div>
-                    <div class="relative z-10 mt-6">
-                         <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-brand-primary w-2/3 shadow-[0_0_10px_rgba(0,193,123,0.5)]"></div>
-                         </div>
-                         <p class="text-xs text-brand-primary mt-2 font-bold uppercase tracking-wide">Progress Oriented</p>
-                    </div>
-                </div>
-
-                <!-- 2. Regular Testing (Wide Card - Top Right) -->
-                <div class="md:col-span-2 md:row-span-1 rounded-[2rem] bg-gray-50 border border-gray-100 p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden group hover:border-brand-secondary/30 hover:shadow-lg transition-all duration-300">
-                     <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white to-transparent z-10 hidden md:block"></div>
-                     <div class="relative z-20 max-w-md">
-                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary text-xl">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-2xl text-brand-navy">Regular Testing</h3>
-                         </div>
-                         <p class="text-gray-500 text-sm mb-4">Daily Prelims & Mains practice with detailed performance analytics to track your growth curve.</p>
-                         <div class="flex gap-2">
-                             <span class="px-3 py-1 rounded-lg bg-white border text-xs font-bold text-gray-600 shadow-sm">Daily Quiz</span>
-                             <span class="px-3 py-1 rounded-lg bg-white border text-xs font-bold text-gray-600 shadow-sm">Weekly Mock</span>
-                         </div>
-                     </div>
-                     <!-- Visual Element -->
-                     <div class="relative z-0 mt-6 md:mt-0 md:absolute md:right-8 md:top-1/2 md:-translate-y-1/2">
-                         <div class="w-32 h-32 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center relative">
-                             <svg class="w-full h-full transform -rotate-90">
-                                 <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="8" fill="transparent" class="text-gray-100" />
-                                 <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="351.86" stroke-dashoffset="35" class="text-brand-primary" />
-                             </svg>
-                             <span class="absolute text-xl font-bold text-brand-navy">98%</span>
-                         </div>
-                     </div>
-                </div>
-
-                <!-- 3. Mentorship (Square - Middle) -->
-                <div class="md:col-span-1 md:row-span-1 rounded-[2rem] bg-gradient-to-br from-brand-secondary to-blue-600 p-8 text-white flex flex-col justify-between group hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
-                     <div class="flex justify-between items-start">
-                         <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white text-xl backdrop-blur-sm">
-                            <i class="fas fa-user-astronaut"></i>
-                        </div>
-                        <i class="fas fa-arrow-up-right text-white/50 group-hover:text-white group-hover:rotate-45 transition-all"></i>
-                     </div>
-                     <div>
-                        <h3 class="font-heading font-bold text-2xl mb-1">Mentorship</h3>
-                        <p class="text-blue-100 text-xs">1-to-1 Consistent guidance</p>
-                     </div>
-                </div>
-
-                <!-- 4. Study Material (Square - Right) -->
-                <div class="md:col-span-1 md:row-span-1 rounded-[2rem] bg-white border border-gray-200 p-8 flex flex-col justify-between group hover:border-brand-primary hover:shadow-lg transition-all duration-300">
-                    <div class="flex justify-between items-start">
-                         <div class="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center text-brand-navy text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                     </div>
-                     <div>
-                        <h3 class="font-heading font-bold text-2xl text-brand-navy mb-1">Study Material</h3>
-                        <p class="text-gray-500 text-xs">Concise notes & resources</p>
-                     </div>
-                </div>
-
-                <!-- 5. Offline Environment (Wide Bar - Bottom) -->
-                <div class="md:col-span-3 md:row-span-1 rounded-[2rem] bg-[#0B1120] p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-                    <!-- Background Pattern -->
-                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#007fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Medium Card -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-soft border border-gray-100 relative overflow-hidden group hover:shadow-xl hover:border-brand-primary/20 transition-all duration-500">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-brand-primary/10 transition-colors duration-500"></div>
                     
-                    <div class="flex items-center gap-6 relative z-10 mb-6 md:mb-0">
-                        <div class="w-16 h-16 bg-gradient-to-br from-brand-primary to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-glow">
-                            <i class="fas fa-university"></i>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-5 mb-8">
+                            <div class="w-14 h-14 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary text-2xl group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl md:text-3xl text-brand-navy">Medium Available</h3>
                         </div>
-                        <div>
-                            <h3 class="font-heading font-bold text-2xl text-white">Offline Centres</h3>
-                            <p class="text-gray-400 text-sm">Discipline-focused learning environment</p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center p-5 rounded-2xl bg-brand-cream border border-gray-100 group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="font-bold text-brand-navy text-lg">English</span>
+                            </div>
+                            <div class="flex items-center p-5 rounded-2xl bg-brand-cream border border-gray-100 group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="font-bold text-brand-navy text-lg">Hindi</span>
+                            </div>
+                            <div class="flex items-center p-5 rounded-2xl bg-brand-cream border border-gray-100 group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                                <div class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <span class="font-bold text-brand-navy text-lg">Punjabi</span>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="flex flex-wrap justify-center gap-3 relative z-10">
-                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
-                            <i class="fas fa-map-pin text-brand-primary"></i>
-                            <span class="font-bold text-white text-sm">Chandigarh</span>
+                <!-- Centres Card -->
+                <div class="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-soft border border-gray-100 relative overflow-hidden group hover:shadow-xl hover:border-brand-secondary/20 transition-all duration-500">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/5 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-brand-secondary/10 transition-colors duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-5 mb-8">
+                            <div class="w-14 h-14 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-brand-secondary text-2xl group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-map-location-dot"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-2xl md:text-3xl text-brand-navy">Centres Available</h3>
                         </div>
-                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
-                            <i class="fas fa-map-pin text-brand-secondary"></i>
-                            <span class="font-bold text-white text-sm">Patiala</span>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Locations -->
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Chandigarh</span>
+                            </div>
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Patiala</span>
+                            </div>
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Bathinda</span>
+                            </div>
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Ludhiana</span>
+                            </div>
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Amritsar</span>
+                            </div>
+                            <div class="flex items-center p-4 rounded-xl bg-brand-cream border border-gray-100 hover:bg-white hover:shadow-md hover:border-brand-secondary/30 transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-brand-secondary text-xl mr-3"></i>
+                                <span class="font-bold text-gray-700">Jalandhar</span>
+                            </div>
                         </div>
-                        <div class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center gap-3 group hover:bg-white/10 transition-colors">
-                            <i class="fas fa-map-pin text-orange-400"></i>
-                            <span class="font-bold text-white text-sm">Bathinda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials Section -->
+    <section class="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-brand-primary font-bold tracking-widest uppercase text-xs">Real Stories</span>
+                    <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-brand-navy mt-2">Success Stories in Motion</h2>
+                </div>
+                <!-- Slider Controls -->
+                <div class="flex gap-3">
+                    <button onclick="scrollVideos('left')" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-brand-navy hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all shadow-sm">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="scrollVideos('right')" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-brand-navy hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all shadow-sm">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Slider Container -->
+            <div id="video-slider" class="flex gap-6 overflow-x-auto scroll-smooth pb-8 hide-scrollbar snap-x snap-mandatory">
+                
+                <!-- Video Card 1 -->
+                <div class="min-w-full md:min-w-[calc(33.333%-1rem)] snap-center">
+                    <div class="group relative rounded-3xl overflow-hidden cursor-pointer shadow-soft hover:shadow-xl transition-all duration-300">
+                        <!-- Thumbnail (Portrait) -->
+                        <div class="aspect-[9/16] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x711/0f265c/ffffff?text=Topper+Talk+1" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                            <!-- Play Button -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-play text-white ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Overlay Text at bottom of video -->
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h4 class="font-heading font-bold text-lg text-white leading-tight">How I Cracked UPSC in 1st Attempt</h4>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-bold text-white border border-white/20">AIR 12</span>
+                                    <span class="text-sm text-gray-200">Ravi Kumar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="min-w-full md:min-w-[calc(33.333%-1rem)] snap-center">
+                    <div class="group relative rounded-3xl overflow-hidden cursor-pointer shadow-soft hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-[9/16] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x711/00c17b/ffffff?text=Topper+Talk+2" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-play text-white ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h4 class="font-heading font-bold text-lg text-white leading-tight">Strategy for CSAT & GS Mains</h4>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-bold text-white border border-white/20">AIR 45</span>
+                                    <span class="text-sm text-gray-200">Priya Sharma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="min-w-full md:min-w-[calc(33.333%-1rem)] snap-center">
+                    <div class="group relative rounded-3xl overflow-hidden cursor-pointer shadow-soft hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-[9/16] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x711/007fff/ffffff?text=Topper+Talk+3" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-play text-white ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h4 class="font-heading font-bold text-lg text-white leading-tight">Maluka IAS Mentorship Review</h4>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-bold text-white border border-white/20">AIR 89</span>
+                                    <span class="text-sm text-gray-200">Amit Singh</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="min-w-full md:min-w-[calc(33.333%-1rem)] snap-center">
+                    <div class="group relative rounded-3xl overflow-hidden cursor-pointer shadow-soft hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-[9/16] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x711/0f265c/ffffff?text=Topper+Talk+4" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-play text-white ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h4 class="font-heading font-bold text-lg text-white leading-tight">My Optional Subject Strategy</h4>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-bold text-white border border-white/20">AIR 102</span>
+                                    <span class="text-sm text-gray-200">Neha Gupta</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Video Card 5 -->
+                <div class="min-w-full md:min-w-[calc(33.333%-1rem)] snap-center">
+                    <div class="group relative rounded-3xl overflow-hidden cursor-pointer shadow-soft hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-[9/16] bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x711/00c17b/ffffff?text=Topper+Talk+5" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-play text-white ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                <h4 class="font-heading font-bold text-lg text-white leading-tight">Importance of Daily Answer Writing</h4>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-white/20 backdrop-blur-sm rounded text-xs font-bold text-white border border-white/20">AIR 156</span>
+                                    <span class="text-sm text-gray-200">Vikram Verma</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
+        <style>
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        </style>
     </section>
 
     <!-- Testimonials (Marquee Style) -->
@@ -498,28 +664,33 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
-                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Regular tests helped improve my preparation speed and confidence.</p>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Maluka Sir ki Personal Guidance ne meri bahut help kari hai is exam ko clear karne mein. Daily Prelims Practise Questions and Answer Writing in GS FOUNDATION BATCH helped me a lot in clearing UPSC CSE. I would thank Maluka Sir and his entire team for my success.
+</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
-                        <span class="text-white font-bold text-sm">Student</span>
+                        <span class="text-white font-bold text-sm">NISHANT GUPTA (427 AIR)
+</span>
                     </div>
                 </div>
 
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
-                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Mentorship gave me a clear plan for GS and CSAT.</p>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">I joined ONLINE GS FOUNDATION BATCH at Maluka IAS. Their guidance helped me in Prelims, Mains & Interview. I am thankful to Maluka IAS for my selection in UPSC CSE 2023.
+</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
-                        <span class="text-white font-bold text-sm">Student</span>
+                        <span class="text-white font-bold text-sm">MANISHA (266 AIR)
+</span>
                     </div>
                 </div>
 
                 <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
                     <div class="text-brand-primary text-4xl mb-4 font-serif">"</div>
-                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">The classroom environment kept me consistent.</p>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">Meri selection me Maluka Sir ka bohut bada role hai. I joined GS FOUNDATION BATCH at Maluka IAS which helped me in clearing Prelims, Mains and Interview. I would specially thank Maluka Sir for my selection in UPSC CSE 2023.</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>
-                        <span class="text-white font-bold text-sm">Student</span>
+                        <span class="text-white font-bold text-sm">KOSHINDER (588 AIR)
+</span>
                     </div>
                 </div>
             </div>
@@ -649,6 +820,17 @@
                 btn.classList.remove('bg-green-600', 'hover:bg-green-700');
                 btn.classList.add('bg-brand-navy', 'hover:bg-brand-secondary');
             }, 1000);
+        }
+
+        function scrollVideos(direction) {
+            const container = document.getElementById('video-slider');
+            const scrollAmount = container.clientWidth; // Scroll one full viewport width (showing 3 cards on desktop)
+            
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         }
     </script>
 </body>
